@@ -1,0 +1,11 @@
+npm install express --save 
+
+
+app.use(express.json()) //json mobile 
+app.use(express.urlencoded({extends:true})) //form-data 
+
+now we create one route files that have all the urls 
+api-routes.js 
+
+
+postman --> to test your rest api 
