@@ -1,5 +1,5 @@
 var router = require("express").Router()
-
+var calcController = require("./calc-controller")
 
 router.get("/home",function(req,res){
     res.send("Home")
@@ -11,12 +11,6 @@ router.get("/login",function(req,res){
 })
 
 
-router.post("/addition",function(req,res){
-    let n1 = parseInt(req.body.n1);
-    let n2 = parseInt(req.body.n2); 
-    let ans = n1 + n2 ; 
-    res.send(ans+"");
-    
-})
+router.post("/addition",calcController.addition);
 
 module.exports = router
